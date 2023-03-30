@@ -11,6 +11,9 @@ const exampleFormControlTextarea1 = document.querySelector('#exampleFormControlT
 const botaoDeEnvio = document.querySelector('#botao-de-envio')
 
 let respostaCorretaAtual = null
+let listaQuestoes = []
+let respostas = [1,2,3]
+let indiceQuestaoAtual = 0
 
 async function postQuestion(question) {
   return fetch('http://localhost:3000/questions', {
